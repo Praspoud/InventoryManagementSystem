@@ -13,8 +13,8 @@ pipeline {
       steps {
 	sh '''
 	  cd /var/lib/jenkins/workspace/Back-End
-	  docker build -t InventoryManagementSystem .
-	  docker run -d -p 4000:80 --name InventoryManagementSystem InventoryManagementSystem
+	  docker build -t inventorymanagementsystem .
+	  docker run -d -p 4000:80 --name inventorymanagementsystem inventorymanagementsystem
 	  docker image prune -f
 	'''
 	}
