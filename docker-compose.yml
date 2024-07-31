@@ -1,0 +1,13 @@
+version: '3.8'
+services: 
+  ms-sql-server:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: Ubuntu@123
+    ports:
+      - "1401:1433"
+  inventory:
+    build: .
+    ports:
+      - "4000:8080"
